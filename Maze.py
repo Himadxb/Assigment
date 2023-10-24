@@ -56,13 +56,13 @@ GridViewer.view(grid)
             currentCol -= 1
         
         else:
-            print("MESSAGE 1") # Invalid direction.
+            print("You have no idea where you're going") # Invalid direction.
         
         if (currentRow < 0 or currentCol < 0 
                         or currentRow >= len(grid) 
                         or currentCol >= len(grid[currentRow])):
             done = True
-            print("MESSAGE 2") # Out of bounds.
+            print("You fall into the chasm of doom.") # Out of bounds.
             
         else:
             if grid[currentRow][currentCol] == EMPTY:
@@ -70,12 +70,15 @@ GridViewer.view(grid)
                 
             elif grid[currentRow][currentCol] == WALL:
                 done = True
-                print("MESSAGE 3") # Hit wall.
+                print("You stumble blindly into a concrete wall.") # Hit wall.
 
             elif grid[currentRow][currentCol] == END:
                 done = True
                 solved = True
-                print(' MESSAGE 4") # Solved.
+
+                print("You stumble blindly into a solid concrete wall.") # Solved.
+
+                print("U DID IT, SOLVED!") # Solved.
                 
             else:
                 pass # Do nothing
@@ -85,7 +88,7 @@ GridViewer.view(grid)
 
 
     if not solved:
-        print("MESSAGE 5") # Did not reach the end.
+        print("you have failed me.") # Did not reach the end.
 
 
 GridViewer.view(grid)
