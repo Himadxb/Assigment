@@ -75,7 +75,7 @@ GridViewer.view(grid)
             elif grid[currentRow][currentCol] == END:
                 done = True
                 solved = True
-                print("MESSAGE 4") # Solved.
+                print("U DID IT, SOLVED!") # Solved.
                 
             else:
                 pass # Do nothing
@@ -85,7 +85,7 @@ GridViewer.view(grid)
 
 
     if not solved:
-        print("MESSAGE 5") # Did not reach the end.
+        print("you have failed me.") # Did not reach the end.
 
 
 GridViewer.view(grid)
